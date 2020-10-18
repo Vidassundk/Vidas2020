@@ -1,0 +1,180 @@
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px) rotate(0deg);
+  }
+  50% {
+    transform: translate(0, 12px) rotate(1deg);
+  }
+  100% {
+    transform: translate(0, -0px rotate(-1deg));
+  }
+}
+
+@keyframes floatingLogo {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, -2px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+@keyframes floatingStraight {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 12px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+@keyframes cardJumpUp {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-2000px);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideout100 {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(100px);
+  }
+}
+
+@keyframes slidein200 {
+  from {
+    transform: translateY(200px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideside100 {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUpS {
+  from {
+    transform: translateY(-30px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDownS {
+  from {
+    transform: translateY(30px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slideDownLogo {
+  from {
+    transform: translateY(30px);
+  }
+
+  to {
+    transform: translateY(17px);
+  }
+}
+@keyframes line {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+@keyframes lineOut {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0;
+  }
+}
+
+@keyframes flagpole {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(3.8);
+  }
+}
+
+@keyframes slidein400 {
+  from {
+    opacity: 0;
+    transform: translateY(400px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slidein90 {
+  from {
+    opacity: 0;
+    transform: translateY(90px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes entrance {
+  from {
+    transform: scaleY(1);
+  }
+
+  to {
+    transform: scaleY(0);
+  }
+}
