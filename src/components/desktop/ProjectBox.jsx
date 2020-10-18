@@ -17,6 +17,8 @@ export default function ProjectBox(props) {
     rightprojecttext: {
       display: "flex",
       fontSize: 20,
+      userSelect: "none",
+      WebkitUserSelect: "none",
       justifyContent: "flex-end",
       alignItems: "flex-start",
       // transform: "rotate(-90deg)",

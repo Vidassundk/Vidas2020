@@ -13,6 +13,8 @@ export default function SmallText(props) {
       fontWeight: props.fontWeight ? props.fontWeight : 500,
       transitionDelay: "0.1s",
       transition: "0.2s",
+      userSelect: "none",
+      WebkitUserSelect: "none",
       lineHeight: 1.35,
       transitionTimingFunction: "ease-in-out",
       transform: !active ? "translateY(15px)" : null,

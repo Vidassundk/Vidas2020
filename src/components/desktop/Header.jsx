@@ -22,6 +22,7 @@ export default function Header(props) {
       position: "relative",
       marginBottom: -160,
       marginRight: "5vw",
+      pointerEvents: "none",
     },
     portfolio: {
       position: "relative",

@@ -40,6 +40,7 @@ export default function Layout(props) {
           mainColor={mainColor}
           mainBackgroundCollor={mainBackgroundCollor}
           dark={dark}
+          lightColor={lightColor}
           darkColor={darkColor}
           switchMode={switchMode}
         />
@@ -48,6 +49,7 @@ export default function Layout(props) {
           mainColor={mainColor}
           mainBackgroundCollor={mainBackgroundCollor}
           dark={dark}
+          lightColor={lightColor}
           darkColor={darkColor}
           switchMode={switchMode}
         />

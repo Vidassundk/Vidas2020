@@ -9,6 +9,8 @@ import { useLocation } from "react-router-dom";
 import TopBar from "./desktop/TopBar";
 
 import PardPage from "./projectPages/PardPage";
+import DanskePage from "./projectPages/DanskePage";
+import ValuerPage from "./projectPages/ValuerPage";
 
 export default function ProjectPage(props) {
   const [started, setStarted] = useState(false);
@@ -113,8 +115,8 @@ export default function ProjectPage(props) {
       {started ? (
         <>
           {props.title === "Pard App" ? <PardPage {...props} /> : null}
-          {props.title === "Danske Bank" ? null : null}
-          {props.title === "Valuer.ai" ? null : null}
+          {props.title === "Danske Bank" ? <DanskePage {...props} /> : null}
+          {props.title === "Valuer AI" ? <ValuerPage {...props} /> : null}
         </>
       ) : null}
       {/* <Danske hovered={false} active={true} {...props} />

@@ -14,7 +14,7 @@ export default function WorkMobile(props) {
     },
     animateIn: {
       animationName: "slidein400",
-      animationDuration: "4s",
+      animationDuration: "2s",
       width: "100%",
     },
     line: {

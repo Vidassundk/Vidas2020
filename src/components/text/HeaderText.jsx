@@ -11,6 +11,8 @@ export default function HeaderText(props) {
     text: {
       fontSize: "10vw",
       pointerEvents: "none",
+      userSelect: "none",
+      WebkitUserSelect: "none",
       fontFamily: "League-Spartain",
       letterSpacing: 14,
       fontWeight: props.fontWeight ? props.fontWeight : 500,

@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import ProjectPage from "../ProjectPage";
 import Parallax from "../Parallax";
 import AboutMe from "../AboutMe";
+import HomePage from "./HomePage";
+import Cursor from "../Cursor";
 
 export default function Desktop(props) {
   // STYLES
@@ -17,15 +19,13 @@ export default function Desktop(props) {
   });
 
   const classes = useStyles();
+
   return (
     <div className={classes.desktopLayout}>
       <Switch>
         <Route exact path="/">
-          <TopBar {...props} />
-          <Parallax />
-          <Header {...props} />
-          <Work {...props} />
-          <AboutMe {...props} />
+          <HomePage {...props} />
+          <Cursor {...props} />
         </Route>
         <Route path="/Pard App" onUpdate={() => window.scrollTo(0, 0)}>
           <ProjectPage title="Pard App" link="pard.lt" {...props} />

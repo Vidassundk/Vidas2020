@@ -7,12 +7,15 @@ import pardTablet from "../../img/pardTablet.png";
 import pardCard from "../../img/pardCard.png";
 import pardCardGroup from "../../img/pardCardGroup.png";
 import pardCloudCard from "../../img/pardCloudCard.png";
+import pardClouds from "../../img/pardClouds.png";
 import pardBox from "../../img/pardBox.png";
-
+import Lithuania from "../../img/Lithuania.png";
+import DelayLink from "react-delay-link";
 import BoldTitleText from "../text/BoldTitleText";
 import ParagraphText from "../text/ParagraphText";
 import ImageContainer from "../ImageContainer";
 import ProjectHeadingSmaller from "../text/ProjectHeadingSmaller";
+import BackButton from "../BackButton";
 
 export default function PardPage(props) {
   // STYLES
@@ -27,8 +30,10 @@ export default function PardPage(props) {
       paddingRight: props.mobile ? 20 : 40,
       paddingLeft: props.mobile ? 20 : 40,
     },
-    projectDescriptionWrapper: {},
-    projectDescription: {},
+    projectDescriptionWrapper: {
+      paddingBottom: 50,
+    },
+    projectDescription: { paddingTop: 10 },
     section: {
       display: "grid",
       gridGap: 20,
@@ -37,13 +42,27 @@ export default function PardPage(props) {
       height: "70vh",
       marginBottom: 50,
     },
-    pardCardGroup: {
-      width: "90vw",
-      margin: "auto",
-      marginBottom: 50,
+    countryImage: {
+      backgroundImage: `url(${Lithuania})`,
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+
+    fullWidthImage: {
+      height: "100%",
+      position: "absolute",
+      top: 0,
     },
     pardCardGroupImage: {
       width: "100%",
+    },
+    parCardGroup: {
+      margin: "auto",
+      marginBottom: 50,
+      paddingRight: props.mobile ? 20 : 40,
+      paddingLeft: props.mobile ? 20 : 40,
+      maxWidth: 1100,
     },
   });
 
@@ -55,9 +74,11 @@ export default function PardPage(props) {
           <div className={classes.container}>
             <div>
               <BoldTitleText {...props}>{props.title}</BoldTitleText>
-              <ParagraphText link {...props} fontWeight="400" capitalise>
-                {props.link}
-              </ParagraphText>
+              <a target="_blank" href="https://pard.lt/">
+                <ParagraphText link {...props} fontWeight="400" capitalise>
+                  Pard App
+                </ParagraphText>
+              </a>
             </div>
           </div>
           <div className={classes.container}>
@@ -244,7 +265,7 @@ export default function PardPage(props) {
               <ImageContainer
                 src={pardCloudCard}
                 width={400}
-                color="#8BCFFF"
+                backgroundImage={pardClouds}
                 mobileHeight={500}
                 {...props}
               />
@@ -271,7 +292,7 @@ export default function PardPage(props) {
               </div>
             </div>
           </div>
-          <div className={classes.pardCardGroup}>
+          <div className={classes.parCardGroup}>
             <img className={classes.pardCardGroupImage} src={pardCardGroup} />
           </div>
           <div className={classes.container}>
@@ -306,12 +327,21 @@ export default function PardPage(props) {
             <div className={classes.section}>
               <ImageContainer
                 src={pardBox}
-                width={500}
+                width={400}
                 color="#BCA18F"
                 mobileHeight={500}
                 {...props}
               />
             </div>
+          </div>
+          <div className={`${classes.countryImage} ${classes.bigImage} `}>
+            <ProjectHeading white big {...props}>
+              Lithuania
+            </ProjectHeading>
+          </div>
+          <div className={classes.container}>
+            {" "}
+            <BackButton {...props} />
           </div>
         </div>
       </div>

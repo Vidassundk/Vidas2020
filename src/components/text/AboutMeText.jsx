@@ -5,9 +5,11 @@ export default function AboutMeText(props) {
   // STYLES
   const useStyles = makeStyles({
     text: {
-      fontSize: 32,
+      fontSize: props.mobile ? 28 : 32,
       color: props.mainColor,
       fontFamily: "Roboto",
+      userSelect: "none",
+      WebkitUserSelect: "none",
       letterSpacing: 1.5,
       fontWeight: props.link ? 300 : 400,
       transitionDelay: "0.1s",

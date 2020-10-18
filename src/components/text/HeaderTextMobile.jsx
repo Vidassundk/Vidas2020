@@ -12,7 +12,10 @@ export default function HeaderTextMobile(props) {
       fontSize: 30,
       pointerEvents: "none",
       fontFamily: "League-Spartain",
+      userSelect: "none",
+      WebkitUserSelect: "none",
       letterSpacing: 10,
+
       fontWeight: props.fontWeight ? props.fontWeight : 500,
       WebkitTextStroke: props.weird ? `1px  ${props.mainColor}` : "none",
       transitionDelay: "0.1s",

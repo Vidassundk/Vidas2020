@@ -13,7 +13,7 @@ export default function Work(props) {
     },
     animateIn: {
       animationName: "slidein400",
-      animationDuration: "4s",
+      animationDuration: "2s",
       width: "100%",
     },
   });
@@ -21,8 +21,6 @@ export default function Work(props) {
   const classes = useStyles();
   return (
     <div className={classes.container}>
-      <Cursor {...props} />
-
       <div className={classes.animateIn}>
         <WorkGridRow
           description="Shopping platform for small businesses"

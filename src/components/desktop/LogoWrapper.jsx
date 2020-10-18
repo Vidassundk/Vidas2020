@@ -49,7 +49,7 @@ export default function LogoWrapper(props) {
         // clickAction={props.transition}
         to={`/`}
       >
-        <div className={classes.textWrapper}>
+        <div className={`${classes.textWrapper} `}>
           <div className={classes.up}>
             <SmallText fontWeight="bold" {...props}>
               Vidas Stirbys

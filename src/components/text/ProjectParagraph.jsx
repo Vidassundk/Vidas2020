@@ -11,7 +11,8 @@ export default function ProjectParagraph(props) {
       letterSpacing: 0.6,
       fontWeight: props.bold ? "bold" : 400,
       lineHeight: 1.35,
-
+      userSelect: "none",
+      WebkitUserSelect: "none",
       marginTop: 20,
       color: props.mainColor,
       marginBottom: 15,

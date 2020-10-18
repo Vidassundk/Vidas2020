@@ -27,7 +27,7 @@ const ProjectBoxContent = (props) => {
 
   const useStyles = makeStyles({
     projectbox: {
-      width: props.active ? (props.resize ? null : "100vw") : 450,
+      width: props.active ? "100vw" : 450,
       webkitBoxShadow: props.active
         ? null
         : "0px 0px 14px 7px rgba(0, 0, 0, 0.01)",
@@ -62,7 +62,7 @@ const ProjectBoxContent = (props) => {
 
   return (
     <DelayLink
-      delay={1000}
+      delay={500}
       clickAction={props.transition}
       to={`/${props.title}`}
     >

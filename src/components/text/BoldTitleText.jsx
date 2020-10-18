@@ -7,6 +7,8 @@ export default function BoldTitleText(props) {
     text: {
       fontSize: 24,
       color: props.mainColor,
+      userSelect: "none",
+      WebkitUserSelect: "none",
       fontFamily: "League-Spartain",
       letterSpacing: 1.5,
       fontWeight: "bold",
@@ -16,9 +18,8 @@ export default function BoldTitleText(props) {
       transitionTimingFunction: "ease-in-out",
       textTransform: "uppercase",
       marginTop: 20,
-      color: props.mainColor,
       marginBottom: 15,
-      color: props.mainColor ? props.mainColor : "black",
+      cursor: props.back ? "pointer" : "auto",
     },
   });
 

@@ -66,6 +66,10 @@ export default function Cursor(props) {
       });
       link.addEventListener("click", () => {
         setDisapear(true);
+
+        setTimeout(function () {
+          setDisapear(false);
+        }, 500);
       });
       link.addEventListener("mouseleave", () => {
         setActiveLinkHovered(false);

@@ -6,6 +6,7 @@ import AboutMe from "../AboutMe";
 import HeaderMobile from "./HeaderMobile";
 import WorkMobile from "./WorkMobile";
 import ProjectPage from "../ProjectPage";
+import HomePageMobile from "./HomePageMobile";
 
 export default function Mobile(props) {
   // STYLES
@@ -18,10 +19,7 @@ export default function Mobile(props) {
     <div className={classes.mobileLayout}>
       <Switch>
         <Route exact path="/">
-          <TopBar {...props} />
-          <HeaderMobile {...props} />
-          <WorkMobile {...props} />
-          <AboutMe {...props} />
+          <HomePageMobile {...props} />
         </Route>
         <Route path="/Pard App" mobile onUpdate={() => window.scrollTo(0, 0)}>
           <ProjectPage mobile title="Pard App" link="pard.lt" {...props} />
