@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
+import Floating from "./Floating";
 export default function ImageContainer(props) {
   const useStyles = makeStyles({
     container: {
@@ -33,8 +34,18 @@ export default function ImageContainer(props) {
   const classes = useStyles();
 
   return (
-    <div className={classes.container}>
-      <img className={classes.image} src={props.src} />
-    </div>
+    <>
+      {props.floating ? (
+        <div className={classes.container}>
+          <Floating animationName="floatingStraight" intensity="6s">
+            <img className={classes.image} src={props.src} />
+          </Floating>
+        </div>
+      ) : (
+        <div className={classes.container}>
+          <img className={classes.image} src={props.src} />
+        </div>
+      )}
+    </>
   );
 }

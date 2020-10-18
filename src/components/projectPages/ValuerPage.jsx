@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import ProjectHeading from "../text/ProjectHeading";
 import ProjectParagraph from "../text/ProjectParagraph";
-import copenhagen2 from "../../img/copenhagen2.png";
+import copenhagen2 from "../../img/copenhagen2.jpeg";
 import valuerLogo from "../../img/valuerLogo.png";
 import valuerSky from "../../img/valuerSky.png";
 import valuerDark from "../../img/valuerDark.png";
@@ -13,7 +13,7 @@ import BoldTitleText from "../text/BoldTitleText";
 import ParagraphText from "../text/ParagraphText";
 import ImageContainer from "../ImageContainer";
 
-import BackButton from "../BackButton";
+import LinkButton from "../LinkButton";
 
 export default function ValuerPage(props) {
   // STYLES
@@ -42,6 +42,8 @@ export default function ValuerPage(props) {
     },
     countryImage: {
       backgroundImage: `url(${copenhagen2})`,
+      backgroundPosition: "center",
+      backgroundSize: "cover",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
@@ -108,6 +110,7 @@ export default function ValuerPage(props) {
                 src={valuerLight}
                 width={400}
                 color="#FAFAFA"
+                floating
                 mobileHeight={500}
                 {...props}
               />
@@ -135,8 +138,25 @@ export default function ValuerPage(props) {
             </ProjectHeading>
           </div>
           <div className={classes.container}>
-            {" "}
-            <BackButton {...props} />
+            <div className={classes.section}>
+              <LinkButton {...props} title="">
+                ↩ back
+              </LinkButton>
+            </div>
+            <div className={classes.section}>
+              <div>
+                <div onClick={props.scrollToTop}>
+                  <LinkButton {...props} title="Pard App">
+                    Pard APP ↪
+                  </LinkButton>
+                </div>
+                <div onClick={props.scrollToTop}>
+                  <LinkButton {...props} title="Danske Bank">
+                    Danske Bank ↪
+                  </LinkButton>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

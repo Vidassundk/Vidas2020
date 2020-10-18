@@ -7,7 +7,7 @@ export default function ProjectHeading(props) {
     text: {
       fontSize: props.big ? 50 : 28,
       color: props.white ? props.lightColor : props.mainColor,
-      fontFamily: "Roboto",
+      fontFamily: props.big ? "Piazzolla" : "Roboto",
       letterSpacing: 3,
       fontWeight: 400,
       transitionDelay: "0.1s",

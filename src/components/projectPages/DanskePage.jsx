@@ -11,7 +11,7 @@ import BoldTitleText from "../text/BoldTitleText";
 import ParagraphText from "../text/ParagraphText";
 import ImageContainer from "../ImageContainer";
 import ProjectHeadingSmaller from "../text/ProjectHeadingSmaller";
-import BackButton from "../BackButton";
+import LinkButton from "../LinkButton";
 
 export default function DanskePage(props) {
   // STYLES
@@ -40,6 +40,8 @@ export default function DanskePage(props) {
     },
     countryImage: {
       backgroundImage: `url(${copenhagen1})`,
+      backgroundPosition: "center",
+      backgroundSize: "cover",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
@@ -169,7 +171,7 @@ export default function DanskePage(props) {
               </div>
               <ImageContainer
                 src={mobileBankingApp}
-                width={800}
+                width={600}
                 mobileHeight={500}
                 {...props}
               />
@@ -194,7 +196,25 @@ export default function DanskePage(props) {
             </ProjectHeading>
           </div>
           <div className={classes.container}>
-            <BackButton {...props} />
+            <div className={classes.section}>
+              <LinkButton {...props} title="">
+                ↩ back
+              </LinkButton>
+            </div>
+            <div className={classes.section}>
+              <div>
+                <div onClick={props.scrollToTop}>
+                  <LinkButton {...props} title="Pard App">
+                    Pard APP ↪
+                  </LinkButton>
+                </div>
+                <div onClick={props.scrollToTop}>
+                  <LinkButton {...props} title="Valuer.AI">
+                    Valuer.AI ↪
+                  </LinkButton>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

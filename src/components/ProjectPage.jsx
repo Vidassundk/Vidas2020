@@ -23,7 +23,7 @@ export default function ProjectPage(props) {
   // }, [pathname]);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    scrollToTop();
     setTimeout(function () {
       setStarted(true);
     }, 100);
@@ -31,6 +31,10 @@ export default function ProjectPage(props) {
       setStarted1(true);
     }, 200);
   }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
 
   const useStyles = makeStyles({
     topBar: {
@@ -114,9 +118,15 @@ export default function ProjectPage(props) {
 
       {started ? (
         <>
-          {props.title === "Pard App" ? <PardPage {...props} /> : null}
-          {props.title === "Danske Bank" ? <DanskePage {...props} /> : null}
-          {props.title === "Valuer AI" ? <ValuerPage {...props} /> : null}
+          {props.title === "Pard App" ? (
+            <PardPage scrollToTop={scrollToTop} {...props} />
+          ) : null}
+          {props.title === "Danske Bank" ? (
+            <DanskePage scrollToTop={scrollToTop} {...props} />
+          ) : null}
+          {props.title === "Valuer AI" ? (
+            <ValuerPage scrollToTop={scrollToTop} {...props} />
+          ) : null}
         </>
       ) : null}
       {/* <Danske hovered={false} active={true} {...props} />

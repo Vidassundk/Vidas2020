@@ -40,7 +40,7 @@ export default function LogoWrapper(props) {
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
-      <div className={classes.logoContainer}>
+      <div className={` ${classes.logoContainer} mouseHoverItem`}>
         <Logo open={open} {...props} />
       </div>
 

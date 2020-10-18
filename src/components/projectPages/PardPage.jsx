@@ -15,7 +15,8 @@ import BoldTitleText from "../text/BoldTitleText";
 import ParagraphText from "../text/ParagraphText";
 import ImageContainer from "../ImageContainer";
 import ProjectHeadingSmaller from "../text/ProjectHeadingSmaller";
-import BackButton from "../BackButton";
+import LinkButton from "../LinkButton";
+import Floating from "../Floating";
 
 export default function PardPage(props) {
   // STYLES
@@ -44,6 +45,8 @@ export default function PardPage(props) {
     },
     countryImage: {
       backgroundImage: `url(${Lithuania})`,
+      backgroundPosition: "center",
+      backgroundSize: "cover",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
@@ -262,13 +265,16 @@ export default function PardPage(props) {
                   economies.
                 </ProjectParagraph>
               </div>
+
               <ImageContainer
                 src={pardCloudCard}
-                width={400}
+                width={450}
                 backgroundImage={pardClouds}
                 mobileHeight={500}
+                floating
                 {...props}
               />
+
               <div>
                 <ProjectHeadingSmaller small {...props}>
                   Value Proposition / Key Selling Points / Why use our service ?
@@ -327,7 +333,7 @@ export default function PardPage(props) {
             <div className={classes.section}>
               <ImageContainer
                 src={pardBox}
-                width={400}
+                width={450}
                 color="#BCA18F"
                 mobileHeight={500}
                 {...props}
@@ -340,8 +346,25 @@ export default function PardPage(props) {
             </ProjectHeading>
           </div>
           <div className={classes.container}>
-            {" "}
-            <BackButton {...props} />
+            <div className={classes.section}>
+              <LinkButton {...props} title="">
+                ↩ back
+              </LinkButton>
+            </div>
+            <div className={classes.section}>
+              <div>
+                <div onClick={props.scrollToTop}>
+                  <LinkButton {...props} title="Danske Bank">
+                    Danske Bank ↪
+                  </LinkButton>
+                </div>
+                <div onClick={props.scrollToTop}>
+                  <LinkButton {...props} title="Valuer.AI">
+                    Valuer.AI ↪
+                  </LinkButton>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
